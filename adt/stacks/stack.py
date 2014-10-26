@@ -22,7 +22,13 @@ ___version__ = 1.0.0
 
 
 class Stack(object):
-    '''Stack implementation'''
+    '''Stack 
+    
+    A stack is a linear data structure that can be accessed only at one of its
+    ends for either storing or retriving. Stack is called LIFO(last in first 
+    out) structure too.
+    '''
+
     def __init__(self):
         self._items = []
 
