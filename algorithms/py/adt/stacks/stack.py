@@ -20,58 +20,72 @@ ___version__ = 1.0.0
 
 
 class Stack(object):
-    '''Stack 
-    
+    '''Stack
+
     A stack is a linear data structure that can be accessed only at one of its
-    ends for either storing or retriving. Stack is called LIFO(last in first 
+    ends for either storing or retriving. Stack is called LIFO(last in first
     out) structure too.
     '''
 
     def __init__(self):
+
         self._items = []
 
     def is_empty(self):
+
         return not bool(self._items)
 
     def size(self):
+
         return len(self._items)
 
     def push(self, data):
+
         self._items.append(data)
 
     def pop(self):
+
         if self._items:
             return self._items.pop()
         else:
             print("This stack is empty!")
 
     def peek(self):
+
         if self._items:
             return self._items[-1]
         else:
             print("This stack is empty!")
 
     def __repr__(self):
+
         print "{}".format(self._items)
 
 class Node(object):
     '''Node implementation'''
+
     def __init__(self, data=None, next=None):
+
         self.data = data
         self.next = next
 
 class StackL(object):
     '''Stack implementation with linked list'''
+
     def __init__(self):
+
         self._head = None
 
     def is_empty(self):
+
         return not bool(self._head)
 
     def push(self, data):
+
         self._head = Node(data, self._head)
 
     def pop(self):
+
         if self._head:
             data = self._head.data
             self._head = self._head.next
@@ -80,12 +94,14 @@ class StackL(object):
             print("This stack is empty!")
 
     def peek(self):
+
         if self._head:
             return self._head.data
         else:
             print("This stack is empty!")
 
     def size(self):
+
         if self._head:
             node = self._head
             n = 0
